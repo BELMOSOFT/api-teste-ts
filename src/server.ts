@@ -14,7 +14,9 @@ app.get("/ping", (req: Request, res: Response) => {
 });
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Express + TypeScript Server");
+  return res.status(200).json({
+    message: "Hello World!",
+  });
 });
 
 app.listen(port, () => {
